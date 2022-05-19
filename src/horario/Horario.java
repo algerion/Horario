@@ -26,7 +26,7 @@ public class Horario {
     }
 
     public void setDiaHora(String dia, String hora, String aula, Materia materia) {
-        if(!getDiaHora(dia, hora).equals(""))
+        if(getDiaHora(dia, hora).equals(""))
             horas.add(new DiaHora(dia, hora, aula, materia));
     }
 
@@ -38,6 +38,4 @@ public class Horario {
         
         return lista;
     }
-    
-    
 }

@@ -55,7 +55,7 @@ public class DiaHora {
     @Override
     public String toString() {
         return "Día: " + dia + ", Hora: " + hora + ", Aula: " + aula + 
-                ", Materia: " + materia;
+                ", " + materia;
     }
     
     
