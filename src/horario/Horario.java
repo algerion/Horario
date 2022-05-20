@@ -5,6 +5,8 @@
  */
 package horario;
 
+import enums.Dias;
+import enums.Horas;
 import java.util.ArrayList;
 
 /**
@@ -18,14 +20,15 @@ public class Horario {
         this.horas = new ArrayList<>();
     }
 
-    public String getDiaHora(String dia, String hora) {
+    public String getDiaHora(Dias dia, Horas hora) {
         for(DiaHora dh : horas)
-            if(dh.getDia().equals(dia) && dh.getHora().equals(hora))
+//            if(dh.getDia().equals(dia) && dh.getHora().equals(hora))
+            if(dh.getDia() == dia && dh.getHora() == hora)
                 return horas.toString();
         return "";
     }
 
-    public void setDiaHora(String dia, String hora, String aula, Materia materia) {
+    public void setDiaHora(Dias dia, Horas hora, String aula, Materia materia) {
         if(getDiaHora(dia, hora).equals(""))
             horas.add(new DiaHora(dia, hora, aula, materia));
     }

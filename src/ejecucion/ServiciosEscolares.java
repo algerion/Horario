@@ -5,6 +5,8 @@
  */
 package ejecucion;
 
+import enums.Dias;
+import enums.Horas;
 import horario.Horario;
 import horario.Materia;
 
@@ -19,8 +21,12 @@ public class ServiciosEscolares {
     public static void main(String[] args) {
         // TODO code application logic here
         Horario h = new Horario();
-        h.setDiaHora("Lunes", "07:00-08:00", "A6", new Materia("Programación Orientada a Objetos", "2SF", "Angel Bravo"));
-        h.setDiaHora("Lunes", "07:00-08:00", "A3", new Materia("Programación Funcional", "2SF", "Profesor 2"));
+        Materia poo = new Materia("Programación Orientada a Objetos", "2SF", "Angel Bravo");
+        Materia pf = new Materia("Programación Funcional", "2SF", "Profesor 2");
+        h.setDiaHora(Dias.LUNES, Horas.SIETE, "A6", poo);
+        h.setDiaHora(Dias.LUNES, Horas.SIETE, "A3", pf);
+        h.setDiaHora(Dias.LUNES, Horas.OCHO, "A3", pf);
+        h.setDiaHora(Dias.MARTES, Horas.SIETE, "A6", poo);
         System.out.println(h);
     }
     

@@ -5,34 +5,39 @@
  */
 package horario;
 
+import enums.Dias;
+import enums.Horas;
+
 /**
  *
  * @author USUARIO
  */
 public class DiaHora {
-    private String dia, hora, aula;
+    private Dias dia;
+    private Horas hora;
+    private String aula;
     private Materia materia;
 
-    public DiaHora(String dia, String hora, String aula, Materia materia) {
+    public DiaHora(Dias dia, Horas hora, String aula, Materia materia) {
         this.dia = dia;
         this.hora = hora;
         this.aula = aula;
         this.materia = materia;
     }
 
-    public String getDia() {
+    public Dias getDia() {
         return dia;
     }
 
-    public void setDia(String dia) {
+    public void setDia(Dias dia) {
         this.dia = dia;
     }
 
-    public String getHora() {
+    public Horas getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(Horas hora) {
         this.hora = hora;
     }
 
